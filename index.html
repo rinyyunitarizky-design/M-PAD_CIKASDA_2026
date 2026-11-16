@@ -128,11 +128,11 @@
                 </div>
             </div>
         </div>
-        <!-- KARTU KATEGORI OBJEK SEWA & PENERIMAAN DENDA -->
+        <!-- KARTU KATEGORI OBJEK SEWA & PENDAPATAN DENDA -->
         <div class="glass-panel rounded-2xl p-5 bg-cikasda-cardbg space-y-3">
             <div class="flex items-center justify-between border-b border-cikasda-bg pb-3">
                 <h3 class="text-xs font-black text-cikasda-blue uppercase tracking-wider flex items-center gap-2">
-                    <i class="fa-solid fa-layer-group text-cikasda-yellow"></i> Akumulasi Pendapatan Berdasarkan Target Objek Sewa & Penerimaan Denda (T.A 2026)
+                    <i class="fa-solid fa-layer-group text-cikasda-yellow"></i> Akumulasi Pendapatan Berdasarkan Target Objek Sewa & Pendapatan Denda (T.A 2026)
                 </h3>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
@@ -197,11 +197,11 @@
                     </div>
                     <span id="persen-lainlain" class="text-[10px] font-bold text-cikasda-lightblue block text-right mt-0.5">0.00% Realisasi</span>
                 </div>
-                <!-- Penerimaan Denda (BARU & TERINTEGRASI) -->
+                <!-- Pendapatan Denda (BARU & TERINTEGRASI) -->
                 <div class="p-4 bg-cikasda-bg rounded-xl border-2 border-amber-400/50 space-y-1 shadow-sm">
                     <div class="flex justify-between items-start">
                         <span class="text-[10px] font-black text-amber-700 uppercase block flex items-center gap-1">
-                            <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Penerimaan Denda
+                            <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Pendapatan Denda
                         </span>
                     </div>
                     <span id="pos-denda" class="text-base font-black text-cikasda-blue font-mono block">Rp 0</span>
@@ -299,7 +299,7 @@
                         <i class="fa-solid fa-scale-balanced text-cikasda-yellow"></i> II. Transparansi Likuiditas & Efisiensi Kanal Pembayaran
                     </h4>
                     <p class="text-justify">
-                        Integrasi kanal pembayaran <em>Non-Tunai</em> dan <em>Tunai</em> memberikan keterbukaan arus kas secara real-time. Kebijakan ini dirancang untuk meminimalisasi risiko penyimpangan fiskal, mempercepat proses audit internal perbendaharaan, serta memastikan setiap rupiah kontribusi sewa aset dan penerimaan denda tercatat secara akurat dan akuntabel di kas daerah.
+                        Integrasi kanal pembayaran <em>Non-Tunai</em> dan <em>Tunai</em> memberikan keterbukaan arus kas secara real-time. Kebijakan ini dirancang untuk meminimalisasi risiko penyimpangan fiskal, mempercepat proses audit internal perbendaharaan, serta memastikan setiap rupiah kontribusi sewa aset dan pendapatan denda tercatat secara akurat dan akuntabel di kas daerah.
                     </p>
                 </div>
                 <div class="space-y-2">
@@ -318,7 +318,7 @@
             </div>
         </div>
     </div>
-    <!-- Modal Form Transaksi (Termasuk Pilihan Penerimaan Denda) -->
+    <!-- Modal Form Transaksi (Termasuk Pilihan Pendapatan Denda) -->
     <div id="modalFormTransaksi" class="fixed inset-0 bg-cikasda-blue/40 backdrop-blur-sm z-[9999] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
         <div class="w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-all duration-300 flex flex-col max-h-[90vh] bg-cikasda-cardbg border-2 border-cikasda-blue/10">
             <div class="bg-cikasda-blue text-white p-4 flex items-center justify-between border-b-4 border-cikasda-yellow">
@@ -339,7 +339,7 @@
                         <option value="Sewa Badminton">Badminton (Target: Rp 7.500.000)</option>
                         <option value="Sewa Kantin">Sewa Kantin (Target: Rp 5.000.000)</option>
                         <option value="Sewa Lain-Lain">Sewa Lain-Lain (Target: Rp 2.448.000)</option>
-                        <option value="Penerimaan Denda">Penerimaan Denda (Target: Rp 0)</option>
+                        <option value="Pendapatan Denda">Pendapatan Denda (Target: Rp 0)</option>
                     </select>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
@@ -784,7 +784,7 @@
                 { nama: "Badminton", jumlah: breakdownSewa.badminton },
                 { nama: "Sewa Kantin", jumlah: breakdownSewa.kantin },
                 { nama: "Sewa Lain-Lain", jumlah: breakdownSewa.lainlain },
-                { nama: "Penerimaan Denda", jumlah: breakdownSewa.denda }
+                { nama: "Pendapatan Denda", jumlah: breakdownSewa.denda }
             ];
             arrayKategori.sort((a, b) => b.jumlah - a.jumlah);
             let grandTotalSemua = Object.values(breakdownSewa).reduce((a,b)=>a+b, 0);
